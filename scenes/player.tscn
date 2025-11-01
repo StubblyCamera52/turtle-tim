@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddqfely2dr3qb"]
+
+[ext_resource type="Script" uid="uid://cur0ttcipgtuc" path="res://scenes/player.gd" id="1_3vyb7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u8vuu"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3vyb7"]
+size = Vector2(20, 20)
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_3vyb7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u8vuu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_3vyb7")
