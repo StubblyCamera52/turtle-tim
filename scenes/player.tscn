@@ -1,20 +1,117 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddqfely2dr3qb"]
+[gd_scene load_steps=3 format=3 uid="uid://ddqfely2dr3qb"]
 
 [ext_resource type="Script" uid="uid://01ke6smqlt61" path="res://scripts/Player.cs" id="1_3vyb7"]
-[ext_resource type="Texture2D" uid="uid://byccvdwlkwvi3" path="res://icon.svg" id="2_g2els"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_u8vuu"]
+[ext_resource type="Texture2D" uid="uid://e676cuqbylfm" path="res://assets/Turtle Tim body+flippers.png" id="2_g2els"]
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_3vyb7")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_u8vuu")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_g2els")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
+
+[node name="parts" type="Node2D" parent="."]
+
+[node name="flipperfr" type="Polygon2D" parent="parts"]
+position = Vector2(-72, -34)
+texture = ExtResource("2_g2els")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(80.00001, 23.999996, 111.99999, 47.999996, 111.99999, 16, 95.99999, 8.000001)
+uv = PackedVector2Array(80.00001, 23.999996, 111.99999, 47.999996, 111.99999, 16, 95.99999, 8.000001)
+bones = ["Body", PackedFloat32Array(0, 0, 0, 0), "FL", PackedFloat32Array(0, 0, 0, 0), "BR", PackedFloat32Array(0, 0, 0, 0), "FR", PackedFloat32Array(1, 1, 1, 1), "BL", PackedFloat32Array(0, 0, 0, 0)]
+
+[node name="flipperfl" type="Polygon2D" parent="parts"]
+position = Vector2(-40, -34)
+texture = ExtResource("2_g2els")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(24, 8, 32, 32.000004, 0, 48.000004, 0, 32.000004, 8, 16)
+uv = PackedVector2Array(24, 8, 32, 32.000004, 0, 48.000004, 0, 32.000004, 8, 16)
+bones = ["Body", PackedFloat32Array(0, 0, 0, 0, 0), "FL", PackedFloat32Array(1, 1, 1, 1, 1), "BR", PackedFloat32Array(0, 0, 0, 0, 0), "FR", PackedFloat32Array(0, 0, 0, 0, 0), "BL", PackedFloat32Array(0, 0, 0, 0, 0)]
+
+[node name="flipperbr" type="Polygon2D" parent="parts"]
+position = Vector2(-70, -44)
+texture = ExtResource("2_g2els")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(80.00001, 64, 80.00001, 80, 96.00001, 80, 96.00001, 64)
+uv = PackedVector2Array(80.00001, 64, 80.00001, 80, 96.00001, 80, 96.00001, 64)
+bones = ["Body", PackedFloat32Array(0, 0, 0, 0), "FL", PackedFloat32Array(0, 0, 0, 0), "BR", PackedFloat32Array(1, 1, 1, 1), "FR", PackedFloat32Array(0, 0, 0, 0), "BL", PackedFloat32Array(0, 0, 0, 0)]
+
+[node name="flipperbl" type="Polygon2D" parent="parts"]
+position = Vector2(-42, -44)
+texture = ExtResource("2_g2els")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(32, 64, 32, 80, 16.000008, 80, 16.000008, 64)
+uv = PackedVector2Array(32, 64, 32, 80, 16.000008, 80, 16.000008, 64)
+bones = ["Body", PackedFloat32Array(0, 0, 0, 0), "FL", PackedFloat32Array(0, 0, 0, 0), "BR", PackedFloat32Array(0, 0, 0, 0), "FR", PackedFloat32Array(0, 0, 0, 0), "BL", PackedFloat32Array(1, 1, 1, 1)]
+
+[node name="head" type="Polygon2D" parent="parts"]
+position = Vector2(-56, -39)
+texture = ExtResource("2_g2els")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(48, 15.999999, 63.999992, 15.999999, 63.999996, 0, 47.999996, 0)
+uv = PackedVector2Array(48, 15.999999, 63.999992, 15.999999, 63.999996, 0, 47.999996, 0)
+bones = ["Body", PackedFloat32Array(0, 0, 0, 0), "FL", PackedFloat32Array(0, 0, 0, 0), "BR", PackedFloat32Array(0, 0, 0, 0), "FR", PackedFloat32Array(0, 0, 0, 0), "BL", PackedFloat32Array(0, 0, 0, 0), "head", PackedFloat32Array(1, 1, 1, 1)]
+
+[node name="body" type="Polygon2D" parent="parts"]
+position = Vector2(-56, -39)
+texture = ExtResource("2_g2els")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(47.91716, 15.9975395, 63.973988, 15.972922, 72, 16, 88, 32, 80.00001, 64.00001, 56, 80.00001, 32, 64.00001, 24, 32.000004, 39.999996, 16.000002)
+uv = PackedVector2Array(48.01373, 15.985253, 63.95857, 15.93122, 72, 16, 88, 32, 80.00001, 64.00001, 56, 80.00001, 32, 64.00001, 24, 32.000004, 39.999996, 16.000002)
+bones = ["Body", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1), "FL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "BR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "FR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "BL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="parts"]
+rotation = 0.0015371236
+
+[node name="Body" type="Bone2D" parent="parts/Skeleton2D"]
+rotation = -1.5707964
+scale = Vector2(0.99999994, 0.99999994)
+rest = Transform2D(-4.3711385e-08, -0.99999994, 0.99999994, -4.3711385e-08, 0, 0)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="FL" type="Bone2D" parent="parts/Skeleton2D"]
+position = Vector2(-17, -14)
+rotation = -2.3561945
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(-0.7071067, -0.7071067, 0.7071067, -0.7071067, -17, -14)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = -90.0
+
+[node name="BR" type="Bone2D" parent="parts/Skeleton2D"]
+position = Vector2(14.999999, 24)
+rotation = 2.8797932
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(-0.9659257, 0.2588191, -0.2588191, -0.9659257, 14.999999, 24)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = -90.0
+
+[node name="FR" type="Bone2D" parent="parts/Skeleton2D"]
+position = Vector2(17, -14)
+rotation = 2.3561945
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(-0.7071067, 0.7071067, -0.7071067, -0.7071067, 17, -14)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = -90.0
+
+[node name="BL" type="Bone2D" parent="parts/Skeleton2D"]
+position = Vector2(-14.999999, 24)
+rotation = -2.8797932
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(-0.9659257, -0.2588191, 0.2588191, -0.9659257, -14.999999, 24)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = -90.0
+
+[node name="head" type="Bone2D" parent="parts/Skeleton2D"]
+position = Vector2(0, -22)
+rotation = -1.5707964
+rest = Transform2D(-4.371139e-08, -1, 1, -4.371139e-08, 0, -22)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
