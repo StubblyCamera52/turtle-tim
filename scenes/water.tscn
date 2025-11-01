@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://cnbjitfsh382v"]
+
+[ext_resource type="Shader" uid="uid://dbcah2hkmymdk" path="res://scripts/shaders/water.tres" id="1_bdk6y"]
+
+[sub_resource type="Gradient" id="Gradient_bdk6y"]
+offsets = PackedFloat32Array(0.47033897, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_s3811"]
+frequency = 0.0574
+fractal_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_p1n2c"]
+width = 64
+height = 64
+noise = SubResource("FastNoiseLite_s3811")
+color_ramp = SubResource("Gradient_bdk6y")
+
+[sub_resource type="Gradient" id="Gradient_ewrsg"]
+colors = PackedColorArray(0, 0, 0, 1, 0.70796657, 0.7079665, 0.7079665, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fiwy5"]
+noise_type = 5
+frequency = 0.2199
+fractal_type = 0
+cellular_return_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xgdjl"]
+noise = SubResource("FastNoiseLite_fiwy5")
+color_ramp = SubResource("Gradient_ewrsg")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bdk6y"]
+shader = ExtResource("1_bdk6y")
+shader_parameter/PixelSize = 64.0
+shader_parameter/WaterColor1 = Color(0.5019608, 0.6313726, 0.7294118, 1)
+shader_parameter/noise = SubResource("NoiseTexture2D_xgdjl")
+shader_parameter/gradient = SubResource("NoiseTexture2D_p1n2c")
+shader_parameter/WaterColor2 = Color(0.5686275, 0.76862746, 0.7647059, 1)
+shader_parameter/Shore = Color(0.9137255, 0.92941177, 0.7882353, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_elfxw"]
+size = Vector2(1000, 1000)
+
+[node name="Water" type="Node2D"]
+rotation = 1.5707964
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+material = SubResource("ShaderMaterial_bdk6y")
+mesh = SubResource("QuadMesh_elfxw")
