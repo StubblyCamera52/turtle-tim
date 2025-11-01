@@ -11,7 +11,8 @@ config_version=5
 [application]
 
 config/name="Turtle Tim"
-config/features=PackedStringArray("4.5", "Forward Plus")
+run/main_scene="uid://bekcafd4hwq6o"
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
