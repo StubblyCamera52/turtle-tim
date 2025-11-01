@@ -5,4 +5,12 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>TurtleTim</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Layer 1_sprite_1.png" />
+    <Content Include="Layer 1_sprite_1.png.import" />
+    <Content Include="Layer 2_sprite_1.png" />
+    <Content Include="Layer 2_sprite_1.png.import" />
+    <Content Include="tile_map.tscn" />
+    <Content Include="Turtle Tim body+flippers.png.import" />
+  </ItemGroup>
 </Project>

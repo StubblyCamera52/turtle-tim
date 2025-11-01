@@ -11,3 +11,7 @@ offset_left = -576.0
 offset_top = -326.0
 offset_right = -406.0
 offset_bottom = -124.0
+
+[node name="Damage" type="Button" parent="Player"]
+offset_right = 8.0
+offset_bottom = 8.0
