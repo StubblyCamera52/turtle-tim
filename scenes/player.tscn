@@ -115,3 +115,11 @@ rest = Transform2D(-4.371139e-08, -1, 1, -4.371139e-08, 0, -22)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
+
+[node name="FLTarget" type="Node2D" parent="parts"]
+
+[node name="BRTarget" type="Node2D" parent="parts"]
+
+[node name="BLTarget" type="Node2D" parent="parts"]
+
+[node name="FRTarget" type="Node2D" parent="parts"]
