@@ -5,7 +5,7 @@ using Godot;
 
 public partial class Player : CharacterBody2D
 {
-	private const float Speed = 1.0f;
+	private const float Speed = 100.0f;
 	private Vector2 _facingDirection;
 	private Label _debug;
 

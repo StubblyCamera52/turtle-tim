@@ -56,7 +56,7 @@ func _process(delta: float) -> void:
 
 		BROffset2 = global_position+BROffset + dir_vec/2;
 
-	FRTarget.global_position.lerp(FROffset2, .5);
-	FLTarget.global_position.lerp(FLOffset2, .5);
-	BRTarget.global_position.lerp(BROffset2, .5);
-	BLTarget.global_position.lerp(BLOffset2, .5);
+	FRTarget.global_position = FRTarget.global_position.lerp(FROffset2, .25);
+	FLTarget.global_position = FLTarget.global_position.lerp(FLOffset2, .25);
+	BRTarget.global_position = BRTarget.global_position.lerp(BROffset2, .25);
+	BLTarget.global_position = BLTarget.global_position.lerp(BLOffset2, .25);
