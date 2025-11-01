@@ -18,6 +18,10 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="viewport"
 
+[dotnet]
+
+project/assembly_name="Turtle Tim"
+
 [input]
 
 right={
