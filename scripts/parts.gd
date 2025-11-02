@@ -15,6 +15,7 @@ var BROffset2: Vector2;
 var BLOffset2: Vector2;
 var FLOffset2: Vector2;
 var FROffset2: Vector2;
+var rot: float;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,36 +27,22 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	rot = get_parent().rotation;
+
 	# update targets
 
-	if FRTarget.global_position.distance_to(global_position+FROffset) > MAX_K_DISTANCE:
-		var dir_vec = (global_position+FROffset) - FRTarget.global_position;
+	if FRTarget.global_position.distance_to(global_position+FROffset.rotated(rot)) > MAX_K_DISTANCE:
+		FROffset2 = (FROffset).rotated(rot)+global_position + Vector2(0,-30).rotated(rot);
+
+	if FLTarget.global_position.distance_to(global_position+FLOffset.rotated(rot)) > MAX_K_DISTANCE:
+		FLOffset2 = (FLOffset).rotated(rot)+global_position + Vector2(0,-30).rotated(rot);
+
+	if BLTarget.global_position.distance_to(global_position+BLOffset.rotated(rot)) > MAX_K_DISTANCE:
+		BLOffset2 = (BLOffset).rotated(rot)+global_position + Vector2(0,-30).rotated(rot);
 		
-		print(dir_vec);
-
-		FROffset2 = global_position+FROffset + dir_vec/2;
-
-	if FLTarget.global_position.distance_to(global_position+FLOffset) > MAX_K_DISTANCE:
-		var dir_vec = (global_position+FLOffset) - FLTarget.global_position;
-		
-		print(dir_vec);
-
-		FLOffset2 = global_position+FLOffset + dir_vec/2;
-
-	if BLTarget.global_position.distance_to(global_position+BLOffset) > MAX_K_DISTANCE:
-		var dir_vec = (global_position+BLOffset) - BLTarget.global_position;
-		
-		print(dir_vec);
-
-		BLOffset2 = global_position+BLOffset + dir_vec/2;
-		
-	if BRTarget.global_position.distance_to(global_position+BROffset) > MAX_K_DISTANCE:
-		var dir_vec = (global_position+BROffset) - BRTarget.global_position;
-		
-		print(dir_vec);
-
-		BROffset2 = global_position+BROffset + dir_vec/2;
-
+	if BRTarget.global_position.distance_to(global_position+BROffset.rotated(rot)) > MAX_K_DISTANCE:
+		BROffset2 = (BROffset).rotated(rot)+global_position + Vector2(0,-30).rotated(rot);
+	
 	FRTarget.global_position = FRTarget.global_position.lerp(FROffset2, .25);
 	FLTarget.global_position = FLTarget.global_position.lerp(FLOffset2, .25);
 	BRTarget.global_position = BRTarget.global_position.lerp(BROffset2, .25);

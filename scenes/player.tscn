@@ -63,7 +63,7 @@ modifications/2 = SubResource("SkeletonModification2DLookAt_qlg0r")
 modifications/3 = SubResource("SkeletonModification2DLookAt_tuyoq")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
-radius = 50.0
+radius = 25.0
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
