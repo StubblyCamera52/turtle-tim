@@ -59,7 +59,7 @@ public partial class Player : CharacterBody2D
 		if (direction != Vector2.Zero)
 		{
 			_facingDirection = direction.Normalized();
-			Rotation = Utils.CalculateRotation(_facingDirection);
+			RotationDegrees = Utils.CalculateRotation(_facingDirection);
 		}
 		
 		if (Input.IsActionJustPressed("ui_dash") && _stamina > 0)
