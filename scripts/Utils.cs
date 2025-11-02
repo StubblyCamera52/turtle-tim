@@ -9,4 +9,20 @@ internal class Utils
     {
         return new Vector2(vector1.X + vector2.X, vector1.Y + vector2.Y);
     }
+
+    internal static int CalculateRotation(Vector2 facingDirection)
+    {
+        return facingDirection switch
+        {
+            { X: 0,  Y: < 0 } => 0,
+            { X: > 0, Y: < 0 } => 45,
+            { X: > 0, Y: 0  } => 90,
+            { X: > 0, Y: > 0 } => 135,
+            { X: 0,  Y: > 0 } => 180,
+            { X: < 0, Y: > 0 } => 225,
+            { X: < 0, Y: 0  } => 270,
+            { X: < 0, Y: < 0 } => 315,
+            _ => 0
+        };
+    }
 }

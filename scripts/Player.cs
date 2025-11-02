@@ -24,6 +24,11 @@ public partial class Player : CharacterBody2D
 		base._Ready();
 		_facingDirection = new Vector2(1, 0);
 		_debug.Text = "Ready";
+		
+		_damageButton.Pressed += () =>
+		{
+			Damage(1);
+		};
   }
 
   private bool Damage(int d)
@@ -36,10 +41,6 @@ public partial class Player : CharacterBody2D
   public override void _PhysicsProcess(double delta)
   {
 	    _damageButton.Text = $"Damage: {_health}";
-	    _damageButton.Pressed += () =>
-	    {
-		    Damage(1);
-	    };
 		Vector2 velocity = Velocity;
 
 		_timeSinceLastDash += (float)delta;
@@ -58,6 +59,7 @@ public partial class Player : CharacterBody2D
 		if (direction != Vector2.Zero)
 		{
 			_facingDirection = direction.Normalized();
+			Rotation = Utils.CalculateRotation(_facingDirection);
 		}
 		
 		if (Input.IsActionJustPressed("ui_dash") && _stamina > 0)
