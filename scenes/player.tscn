@@ -66,6 +66,7 @@ modifications/3 = SubResource("SkeletonModification2DLookAt_tuyoq")
 radius = 25.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 4
 motion_mode = 1
 script = ExtResource("1_3vyb7")
 
@@ -75,7 +76,6 @@ texture = ExtResource("2_qlg0r")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -1)
-zoom = Vector2(1.5, 1.5)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Camera2D"]
 offset_left = -373.0

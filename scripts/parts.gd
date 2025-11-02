@@ -19,10 +19,10 @@ var rot: float;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	BROffset = BRTarget.global_position;
-	BLOffset = BLTarget.global_position;
-	FLOffset = FLTarget.global_position;
-	FROffset = FRTarget.global_position;
+	BROffset = BRTarget.position;
+	BLOffset = BLTarget.position;
+	FLOffset = FLTarget.position;
+	FROffset = FRTarget.position;
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

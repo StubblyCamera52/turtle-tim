@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtb4v4lrgd0cc"]
+
+[ext_resource type="Script" uid="uid://c1i6b28ftifdk" path="res://scenes/crab.gd" id="1_2b8bq"]
+[ext_resource type="Texture2D" uid="uid://b5jr5ciqahlsb" path="res://assets/Crab2.png" id="1_ow7wl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2b8bq"]
+radius = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rq6vx"]
+radius = 49.010204
+
+[node name="Crab" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_2b8bq")
+movement_speed = 75.0
+
+[node name="parts" type="Node2D" parent="."]
+position = Vector2(-75, -50)
+
+[node name="parts" type="Polygon2D" parent="parts"]
+texture = ExtResource("1_ow7wl")
+polygon = PackedVector2Array(56, 32, 48, 40, 48, 64, 64, 72, 88, 72, 104, 64, 104, 40, 96, 32)
+uv = PackedVector2Array(56, 32, 48, 40, 48, 64, 64, 72, 88, 72, 104, 64, 104, 40, 96, 32)
+
+[node name="leftclaw" type="Polygon2D" parent="parts"]
+texture = ExtResource("1_ow7wl")
+polygon = PackedVector2Array(40, 0, 40, 32, 48, 40.000004, 56, 24, 72, 16.000002, 72, 0)
+uv = PackedVector2Array(40, 0, 40, 32, 48, 40.000004, 56, 24, 72, 16.000002, 72, 0)
+
+[node name="rightclaw" type="Polygon2D" parent="parts"]
+texture = ExtResource("1_ow7wl")
+polygon = PackedVector2Array(80.00001, 0, 80.00001, 15.999998, 95.99999, 32, 104.00001, 40, 112.00001, 32, 112.00001, 15.999998, 95.99999, 0)
+uv = PackedVector2Array(80.00001, 0, 80.00001, 15.999998, 95.99999, 32, 104.00001, 40, 112.00001, 32, 112.00001, 15.999998, 95.99999, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="parts"]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 10.0
+path_max_distance = 10000.0
+debug_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2b8bq")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_rq6vx")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

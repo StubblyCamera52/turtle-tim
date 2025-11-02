@@ -5,7 +5,7 @@ using Godot;
 
 public partial class Player : CharacterBody2D
 {
-	private const float Speed = 100.0f;
+	private const float Speed = 500.0f;
 	private const int MaxStamina = 5;
 	private const float StaminaRegenDelay = 1.0f;
 	private const float StaminaRegenRate = 0.25f;
