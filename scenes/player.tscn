@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddqfely2dr3qb"]
+[gd_scene load_steps=11 format=3 uid="uid://ddqfely2dr3qb"]
 
 [ext_resource type="Script" uid="uid://01ke6smqlt61" path="res://scripts/Player.cs" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://6a8c4rw8ad7w" path="res://Layer 2_sprite_1.png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://e676cuqbylfm" path="res://assets/Turtle Tim body+flippers.png" id="2_g2els"]
 [ext_resource type="Script" uid="uid://c450npbm1rbcm" path="res://scripts/parts.gd" id="2_qhqgy"]
 
@@ -68,8 +69,39 @@ motion_mode = 1
 script = ExtResource("1_3vyb7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
-position_smoothing_enabled = true
+position = Vector2(0, -1)
+zoom = Vector2(1.5, 1.5)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D"]
+offset_left = -373.0
+offset_top = -202.0
+offset_right = -197.0
+offset_bottom = -162.0
+
+[node name="1" type="TextureRect" parent="Camera2D/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_dqkch")
+stretch_mode = 2
+
+[node name="2" type="TextureRect" parent="Camera2D/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_dqkch")
+stretch_mode = 2
+
+[node name="3" type="TextureRect" parent="Camera2D/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_dqkch")
+stretch_mode = 2
+
+[node name="4" type="TextureRect" parent="Camera2D/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_dqkch")
+stretch_mode = 2
+
+[node name="5" type="TextureRect" parent="Camera2D/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_dqkch")
+stretch_mode = 2
 
 [node name="parts" type="Node2D" parent="."]
 script = ExtResource("2_qhqgy")

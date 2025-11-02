@@ -11,8 +11,8 @@ default_input_values = [0, 0.0, 1, 0.5, 2, 1e-05]
 function = 4
 
 [sub_resource type="Curve" id="Curve_atayj"]
-_data = [Vector2(0, 0.5066839), 0.0, 0.0, 0, 0, Vector2(0.46446702, 0.70008624), 0.0, 0.0, 0, 0, Vector2(1, 0.6075894), 0.0, 0.0, 0, 0]
-point_count = 3
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(0.339599, 0.57438105), 0.0, 0.0, 0, 0, Vector2(0.68922305, 0.49590755), 0.29977068, 0.29977068, 0, 0, Vector2(1, 0.5), 0.0, 0.0, 0, 0]
+point_count = 4
 
 [sub_resource type="CurveTexture" id="CurveTexture_myjas"]
 curve = SubResource("Curve_atayj")
