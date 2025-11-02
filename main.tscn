@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=4 uid="uid://bekcafd4hwq6o"]
+[gd_scene load_steps=18 format=4 uid="uid://bekcafd4hwq6o"]
 
 [ext_resource type="PackedScene" uid="uid://cnbjitfsh382v" path="res://scenes/water.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://ddqfely2dr3qb" path="res://scenes/player.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://cgomtatmog1ti" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="Texture2D" uid="uid://cpxx707jgctkr" path="res://assets/tileset.png" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dtb4v4lrgd0cc" path="res://scenes/crab.tscn" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://c2nsyghdegjjf" path="res://scenes/title_screen.tscn" id="6_7mycd"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_1bvp3"]
 vertices = PackedVector2Array(2870, 4214, 2826, 4214, 2826, 4170, 2870, 4170, -458, 3126, -694, 3018, -266, 2954, 330, 2954, 758, 3126, 2890, 5130, 3446, 5238, 2422, 5238, 2422, 5130, -246, 2122, -246, 2038, -202, 1930, -202, 2870, -886, 2570, -438, 2186, -330, 2122, -266, 2870, -438, 2102, -330, 2038, -522, 2186, -886, 2486, -266, 1930, -566, 1674, -394, 1590, -394, 1738, -694, 2038, -566, 1590, -438, 1418, -330, 1526, 3830, 5322, 3830, 5706, 3658, 5686, 3466, 5578, 3466, 5430, 3210, 5322, 3318, 5430, 3210, 6006, 3318, 5578, -694, 2934, -694, 2122, -522, 2102, -778, 2122, -970, 2486, -950, 2186, -778, 2934, -970, 2570, 694, 266, 694, 758, 630, 758, -630, 266, -630, 822, -566, 822, 630, 822, 566, 822, 566, 886, 502, 886, 502, 950, 438, 950, 438, 1014, 118, 1014, -502, 886, -118, 1014, 118, 1398, 54, 1398, -118, 1354, 54, 1526, -438, 1354, -330, 1590, -330, 1738, -330, 1802, -266, 1802, 2378, 2058, 2378, 1930, 2678, 1930, 2506, 2102, 2678, 3510, 2506, 3510, 2506, 2806, 2634, 2378, 2294, 2806, 2294, 2870, 2230, 2870, 1930, 2762, 2230, 3318, 2102, 3318, 1866, 2826, 1866, 2762, 2102, 3466, 2294, 3466, 2294, 3594, 2422, 3594, 2422, 4618, 3210, 4534, 2506, 4534, 2506, 4362, 3594, 4362, 3594, 3894, 3402, 3894, 3402, 2122, 5174, 2122, 5174, 3894, 3830, 3894, 3830, 4362, 4298, 4790, 4470, 4362, 4470, 5046, 4342, 5046, 4298, 4874, 4342, 5130, 4470, 5130, 4470, 5430, 4362, 5238, 4342, 5514, 4470, 5514, 4470, 5878, 4362, 5622, 4106, 5878, 4106, 5814, 4362, 5706, 3830, 5814, 3830, 5878, 3658, 5878, 3318, 5770, 3574, 5770, 3574, 6262, 3402, 6006, 3402, 6262, 4234, 5622, 4234, 5322, 4170, 5238, 4170, 5174, 4234, 5130, 3766, 5174, 3766, 5238, 3530, 5238, 3530, 5066, 3722, 5066, 3530, 4618, 3830, 4618, 3830, 4790, 3638, 4790, 3530, 4982, 3638, 4874, 3722, 4982, 3830, 4874, 3830, 5066, 4150, 5130, 4150, 5066, 4234, 4874, 4234, 4790, 4234, 4534, 4150, 4534, 4150, 4598, 4022, 4598, 3914, 4470, 4022, 4682, 4150, 4682, 4150, 4790, 4022, 4790, 4022, 4854, 3958, 4854, 3958, 4982, 3914, 4982, 3830, 4470, 3830, 4534, 3446, 4534, 2422, 5494, 2250, 5494, 2250, 4534, 2422, 4790, 1674, 4534, 1674, 3958, 1610, 3958, 1610, 3894, 1546, 3894, 1546, 3830, 1482, 3830, 1482, 3766, 1418, 3766, 1418, 3702, 1354, 3702, 1354, 3638, 1290, 3638, 1290, 3574, 1226, 3574, 1226, 3402, 1290, 3402, 1290, 3338, 1354, 3338, 1354, 3274, 1418, 3274, 1418, 3210, 1482, 3210, 1482, 3146, 1546, 3146, 1546, 3082, 1610, 3082, 1610, 3018, 1674, 3018, 1674, 2954, 1738, 2954, 1738, 2890, 1802, 2890, 1802, 2826, 1930, 2698, 1994, 2698, 1994, 2634, 2058, 2634, 2058, 2570, 2122, 2570, 2122, 2506, 2230, 2506, 2230, 2570, 2294, 2570, 2294, 2634, 2506, 2634, 2506, 2378, 2634, 2230, 2506, 2230, 1526, 1974, 1526, 2102, 1462, 2102, 330, 1930, 1462, 2422, 822, 2422, 822, 2486, 758, 2486, -458, 3190, -950, 3190, -778, 3018, -950, 2934, -1078, 2934, -1078, 2614, -1142, 2614, -1142, 2486, -1206, 2486, -1206, 2186, -950, 1802, -886, 1802, -778, 2038, -886, 1674, -822, 1674, -822, 1546, -758, 1546, -650, 1590, -650, 1674, -758, 1418, -438, 1014, -438, 950, -502, 950, -566, 886, 2102, 1930, 1738, 1974, 2102, 2058, 1738, 2102, 3126, 4618, 2890, 4790, 3126, 5002, 3210, 5002, 4362, 5322, 4342, 5430, 3318, 5686)
@@ -98,7 +99,7 @@ sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 script = ExtResource("1_lquwl")
 
 [node name="Node" type="Node2D" parent="."]
-position = Vector2(4, 17)
+position = Vector2(5, 17)
 
 [node name="Water" parent="Node" instance=ExtResource("1_0xm2m")]
 position = Vector2(1, 0)
@@ -113,6 +114,7 @@ position = Vector2(501, 0)
 scale = Vector2(0.5, 0.5)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(1, 0)
 navigation_polygon = SubResource("NavigationPolygon_1bvp3")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="NavigationRegion2D" groups=["navigation"]]
@@ -121,10 +123,10 @@ tile_map_data = PackedByteArray("AAAZAD4AAAACAAEAAAAZAD8AAAACAAEAAAAZAEAAAAACAAE
 tile_set = SubResource("TileSet_0xm2m")
 
 [node name="Crab" parent="." instance=ExtResource("5_7mycd")]
-position = Vector2(34, 617)
+position = Vector2(35, 617)
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
-position = Vector2(3459, 5864)
+position = Vector2(3460, 5864)
 
 [node name="Control" type="Node2D" parent="Player"]
 top_level = true
@@ -135,14 +137,20 @@ offset_top = 5539.0
 offset_right = 3053.0
 offset_bottom = 5741.0
 text = "eeeeeeeeeeeeeeeee"
+metadata/_edit_use_anchors_ = true
 
 [node name="Damage" type="Button" parent="Player/Control"]
 offset_left = 3459.0
 offset_top = 5865.0
 offset_right = 3467.0
 offset_bottom = 5873.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="TitleScreen" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(3383, 5893)
+scale = Vector2(2.5309827, 2.5309827)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

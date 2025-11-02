@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2nsyghdegjjf"]
+
+[ext_resource type="Texture2D" uid="uid://bl5ns4ywe3bv0" path="res://assets/title.png" id="1_fgkus"]
+
+[node name="TitleScreen" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+process_mode = 3
+texture = ExtResource("1_fgkus")
