@@ -20,8 +20,8 @@ public partial class Player : CharacterBody2D
 	private float _staminaRegenTimer = 0f;
   public override void _Ready()
   {
-	  _debug = GetNode<Label>(new NodePath("../Debug"));
-	  _damageButton = GetNode<Button>(new NodePath("../Damage"));
+	  _debug = GetNode<Label>(new NodePath("Debug"));
+	  _damageButton = GetNode<Button>(new NodePath("Damage"));
 		base._Ready();
 		_facingDirection = new Vector2(1, 0);
 		_debug.Text = "Ready";
