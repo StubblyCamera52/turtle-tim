@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtb4v4lrgd0cc"]
+[gd_scene load_steps=5 format=3 uid="uid://q0uq2e23piks"]
 
 [ext_resource type="Script" uid="uid://c1i6b28ftifdk" path="res://scenes/crab.gd" id="1_2b8bq"]
 [ext_resource type="Texture2D" uid="uid://b5jr5ciqahlsb" path="res://assets/Crab2.png" id="1_ow7wl"]
@@ -10,9 +10,10 @@ radius = 1.0
 radius = 49.010204
 
 [node name="Crab" type="CharacterBody2D"]
+collision_mask = 0
 motion_mode = 1
 script = ExtResource("1_2b8bq")
-movement_speed = 75.0
+movement_speed = 300.0
 
 [node name="parts" type="Node2D" parent="."]
 position = Vector2(-75, -50)
@@ -36,7 +37,7 @@ uv = PackedVector2Array(80.00001, 0, 80.00001, 15.999998, 95.99999, 32, 104.0000
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 10.0
-path_max_distance = 10000.0
+path_max_distance = 1000.0
 debug_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

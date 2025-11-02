@@ -1,10 +1,10 @@
 [gd_scene load_steps=18 format=4 uid="uid://bekcafd4hwq6o"]
 
-[ext_resource type="PackedScene" uid="uid://cnbjitfsh382v" path="res://scenes/water.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" path="res://scenes/water.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://ddqfely2dr3qb" path="res://scenes/player.tscn" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://cgomtatmog1ti" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="Script" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="Texture2D" uid="uid://cpxx707jgctkr" path="res://assets/tileset.png" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://dtb4v4lrgd0cc" path="res://scenes/crab.tscn" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://q0uq2e23piks" path="res://scenes/crab.tscn" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://c2nsyghdegjjf" path="res://scenes/title_screen.tscn" id="6_7mycd"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_1bvp3"]
@@ -147,6 +147,7 @@ offset_bottom = 5873.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
 autostart = true
 
 [node name="TitleScreen" parent="." instance=ExtResource("6_7mycd")]
