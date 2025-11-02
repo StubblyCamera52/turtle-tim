@@ -126,15 +126,21 @@ position = Vector2(34, 617)
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(3459, 5864)
 
-[node name="Debug" type="Label" parent="Player"]
-offset_left = -576.0
-offset_top = -326.0
-offset_right = -406.0
-offset_bottom = -124.0
+[node name="Control" type="Node2D" parent="Player"]
+top_level = true
 
-[node name="Damage" type="Button" parent="Player"]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Debug" type="Label" parent="Player/Control"]
+offset_left = 2883.0
+offset_top = 5539.0
+offset_right = 3053.0
+offset_bottom = 5741.0
+text = "eeeeeeeeeeeeeeeee"
+
+[node name="Damage" type="Button" parent="Player/Control"]
+offset_left = 3459.0
+offset_top = 5865.0
+offset_right = 3467.0
+offset_bottom = 5873.0
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

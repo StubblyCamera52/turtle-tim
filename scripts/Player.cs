@@ -18,10 +18,14 @@ public partial class Player : CharacterBody2D
 	private float _timeSinceLastDash = 0f;
 	private bool _dashing = false;
 	private float _staminaRegenTimer = 0f;
+	private Camera2D camera;
+	private Node2D controlui;
   public override void _Ready()
   {
-	  _debug = GetNode<Label>(new NodePath("Debug"));
-	  _damageButton = GetNode<Button>(new NodePath("Damage"));
+	  _debug = GetNode<Label>(new NodePath("Control/Debug"));
+		_damageButton = GetNode<Button>(new NodePath("Control/Damage"));
+		camera = GetNode<Camera2D>(new NodePath("Camera2D"));
+		controlui = GetNode<Node2D>(new NodePath("Control"));
 		base._Ready();
 		_facingDirection = new Vector2(1, 0);
 		_debug.Text = "Ready";
@@ -40,7 +44,9 @@ public partial class Player : CharacterBody2D
   }
 
   public override void _PhysicsProcess(double delta)
-  {
+	{
+		controlui.GlobalPosition = camera.GlobalPosition;
+		controlui.Rotation = 0;
 	  GD.Print($"T {_timeSinceLastDash} D {_dashing} DELTA {delta} STAMINA {_stamina}");
 		_damageButton.Text = $"Damage: {_health}";
 		Vector2 velocity = Velocity;
