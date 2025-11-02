@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://bekcafd4hwq6o"]
 
-[ext_resource type="PackedScene" uid="uid://cnbjitfsh382v" path="res://scenes/water.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" path="res://scenes/water.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://ddqfely2dr3qb" path="res://scenes/player.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://ctnbiqdhciijo" path="res://assets/_map2.png" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cpxx707jgctkr" path="res://assets/tileset.png" id="2_h2yge"]
@@ -29,6 +29,16 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 
 [node name="Main" type="Node2D"]
+
+[node name="Debug" type="Label" parent="."]
+offset_left = -576.0
+offset_top = -326.0
+offset_right = -406.0
+offset_bottom = -124.0
+
+[node name="Damage" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="Node" type="Node2D" parent="."]
 position = Vector2(4, 17)
@@ -59,13 +69,3 @@ tile_map_data = PackedByteArray("AAAZAD4AAAACAAEAAAAZAD8AAAACAAEAAAAZAEAAAAACAAE
 tile_set = SubResource("TileSet_0xm2m")
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
-
-[node name="Debug" type="Label" parent="Player"]
-offset_left = -576.0
-offset_top = -326.0
-offset_right = -406.0
-offset_bottom = -124.0
-
-[node name="Damage" type="Button" parent="Player"]
-offset_right = 8.0
-offset_bottom = 8.0

@@ -9,6 +9,10 @@ internal class Utils
     {
         return new Vector2(vector1.X + vector2.X, vector1.Y + vector2.Y);
     }
+    internal static Vector2 MultiplyVector2(Vector2 vector, float scalar)
+    {
+        return new Vector2(vector.X * scalar, vector.Y * scalar);
+    }
 
     internal static int CalculateRotation(Vector2 facingDirection)
     {
