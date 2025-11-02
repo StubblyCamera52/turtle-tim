@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ddqfely2dr3qb"]
+[gd_scene load_steps=12 format=3 uid="uid://ddqfely2dr3qb"]
 
 [ext_resource type="Script" uid="uid://01ke6smqlt61" path="res://scripts/Player.cs" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://6a8c4rw8ad7w" path="res://Layer 2_sprite_1.png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://e676cuqbylfm" path="res://assets/Turtle Tim body+flippers.png" id="2_g2els"]
 [ext_resource type="Script" uid="uid://c450npbm1rbcm" path="res://scripts/parts.gd" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://smxla7e8vtdy" path="res://assets/circle.png" id="2_qlg0r"]
 
 [sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_qhqgy"]
 execution_mode = 1
@@ -67,6 +68,10 @@ radius = 50.0
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_3vyb7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_qlg0r")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -1)
